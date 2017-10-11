@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="github-pandoc.css" type="text/css" />
+</head>
+<body>
+<h2 id="cli-">CLI 命令行实用程序开发基础</h2>
+<h3>1、概述</h3>
+<p>  CLI（Command Line Interface）实用程序是Linux下应用开发的基础。正确的编写命令行程序让应用与操作系统融为一体，通过shell或script使得应用获得最大的灵活性与开发效率。Linux提供了cat、ls、copy等命令与操作系统交互；go语言提供一组实用程序完成从编码、编译、库管理、产品发布全过程支持；容器服务如docker、k8s提供了大量实用程序支撑云服务的开发、部署、监控、访问等管理任务；git、npm等都是大家比较熟悉的工具。尽管操作系统与应用系统服务可视化、图形化，但在开发领域，CLI在编程、调试、运维、管理中提供了图形化程序不可替代的灵活性与效率。</p>
+<h3>2、基础知识</h3>
+<p>  几乎所有语言都提供了完善的 CLI 实用程序支持工具。以下是一些入门文档（c 语言）：</p>
+<ul>
+<li><a href="https://www.ibm.com/developerworks/cn/linux/shell/clutil/index.html">开发 Linux 命令行实用程序</a>。</li>
+<li><a href="https://wenku.baidu.com/view/c7cf91ee5ef7ba0d4a733b58.html">Linux命令行程序设计</a></li>
+</ul>
+<p>如果你熟悉 python ：</p>
+<ul>
+<li><a href="https://www.ibm.com/developerworks/aix/library/au-pythocli/index.html">Using Python to create UNIX command line tools</a></li>
+</ul>
+<p>阅读以后你应该知道 POSIX/GNU 命令行接口的一些概念与规范。命令行程序主要涉及内容：</p>
+<ul>
+<li>命令行参数：常参数、短参数</li>
+<li>stdin、stdout、管道、重定向</li>
+<li>环境变量</li>
+</ul>
+<h3 id="golang-">3、Golang 的支持</h3>
+<p>使用os，flag包，最简单处理参数的代码：</p>
+<div class="sourceCode"><pre class="sourceCode go"><code class="sourceCode go"><span class="kw">package</span> main
+
+<span class="kw">import</span> (
+    <span class="st">&quot;fmt&quot;</span>
+    <span class="st">&quot;os&quot;</span>
+)
+
+<span class="kw">func</span> main() {
+    <span class="kw">for</span> i, a := <span class="kw">range</span> os.Args[<span class="dv">1</span>:] {
+        fmt.Printf(<span class="st">&quot;Argument %d is %s</span><span class="ch">\n</span><span class="st">&quot;</span>, i+<span class="dv">1</span>, a)
+    }
+
+}</code></pre></div>
+<p>使用flag包的代码：</p>
+<div class="sourceCode"><pre class="sourceCode go"><code class="sourceCode go"><span class="kw">package</span> main
+
+<span class="kw">import</span> (
+    <span class="st">&quot;flag&quot;</span>
+    <span class="st">&quot;fmt&quot;</span>
+)
+
+<span class="kw">func</span> main() {
+    <span class="kw">var</span> port <span class="dt">int</span>
+    flag.IntVar(&amp;port, <span class="st">&quot;p&quot;</span>, <span class="dv">8000</span>, <span class="st">&quot;specify port to use.  defaults to 8000.&quot;</span>)
+    flag.Parse()
+
+    fmt.Printf(<span class="st">&quot;port = %d</span><span class="ch">\n</span><span class="st">&quot;</span>, port)
+    fmt.Printf(<span class="st">&quot;other args: %+v</span><span class="ch">\n</span><span class="st">&quot;</span>, flag.Args())
+}</code></pre></div>
+<p>更多代码实践：</p>
+<ul>
+<li><a href="https://thenewstack.io/cli-command-line-programming-with-go/">cat demo</a></li>
+<li><a href="https://github.com/golang/tools/blob/master/cmd/goimports/goimports.go">goimports 实现</a></li>
+</ul>
+<h3>4、开发实践</h3>
+<p>使用 golang 开发 <a href="https://www.ibm.com/developerworks/cn/linux/shell/clutil/index.html">开发 Linux 命令行实用程序</a> 中的 <strong>selpg</strong></p>
+<p>提示：</p>
+<ol>
+<li>请按文档 <strong>使用 selpg</strong> 章节要求测试你的程序</li>
+<li>golang 文件读写、读环境变量，请自己查 os 包</li>
+<li>golang stdin 读，参考<a href="https://stackoverflow.com/questions/29060922/reading-from-stdin-in-golang">这里</a></li>
+<li>应用程序只能修改自己的环境变量，不能修改父程序的环境变量</li>
+</ol>
+<h3>5、代码提交</h3>
+<ul>
+<li>在 Github 提交程序，并在 readme.md 文件中描述设计说明，使用与测试结果。</li>
+<li>如果你写了 关于 golang 或其他与课程相关的博客，请在课程群提交 “学号-姓名-标题.txt” 文件，记录博客的 url</li>
+</ul>
+<p>参考文献：<br />
+[1] Package flag: <a href="https://go-zh.org/pkg/flag/" class="uri">https://go-zh.org/pkg/flag/</a><br />
+[2] Package os: <a href="https://go-zh.org/pkg/os/" class="uri">https://go-zh.org/pkg/os/</a><br />
+[3] [CLI: Command Line Programming with Go](<a href="https://thenewstack.io/cli-command-line-programming-with-go/" class="uri">https://thenewstack.io/cli-command-line-programming-with-go/</a>)</p>
+</body>
+</html>

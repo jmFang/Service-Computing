@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="github-pandoc.css" type="text/css" />
+</head>
+<body>
+<h2 id="-go-">安装 go 语言开发环境</h2>
+<p>既然选择后台开发，强力建议你在 Linux 环境下安装 go 语言开发环境。这里仅是 centos 7 的部分命令，Ubuntu 等的支持请通过网上资源或同学的博客。</p>
+<h3 id="ide-">1、IDE 选择与安装</h3>
+<ul>
+<li>开发环境选择：Ubuntu 、centos 7</li>
+<li>编辑器：</li>
+<li>建议 Atom（写 Github Markdown 神器）</li>
+<li>使用 VIM，Emac大神们，自己研究 golang 的插件</li>
+<li>图形化的IDE 。。。（你合适学 Java， Go 就放弃吧！）</li>
+</ul>
+<p>谷歌开发工具或技术产品，不是不好。。。全是坑啊</p>
+<h3 id="-atom">2、安装 atom</h3>
+<p><a href="http://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-linux" class="uri">http://flight-manual.atom.io/getting-started/sections/installing-atom/#platform-linux</a></p>
+<pre><code>$ sudo yum install atom.x86_64.rpm</code></pre>
+<h3 id="-golang">3、安装 golang</h3>
+<p><a href="https://golang.org/doc/install" class="uri">https://golang.org/doc/install</a></p>
+<p>检查安装</p>
+<pre><code>go version
+go env</code></pre>
+<h3 id="atom--golang">4、Atom 插件与 golang</h3>
+<p>参考资源：</p>
+<p><a href="https://segmentfault.com/a/1190000004933373" class="uri">https://segmentfault.com/a/1190000004933373</a></p>
+<p><a href="http://marcio.io/2015/07/supercharging-atom-editor-for-go-development/" class="uri">http://marcio.io/2015/07/supercharging-atom-editor-for-go-development/</a></p>
+<h4 id="-go-plus-">4.1 安装 go-plus 的一些工具</h4>
+<p><a href="https://atom.io/packages/go-plus" class="uri">https://atom.io/packages/go-plus</a></p>
+<p>Installing Missing Tools</p>
+<pre><code>go get -u golang.org/x/tools/cmd/goimports
+go get -u golang.org/x/tools/cmd/gorename
+go get -u github.com/sqs/goreturns
+go get -u github.com/nsf/gocode
+go get -u github.com/alecthomas/gometalinter
+go get -u github.com/zmb3/gogetdoc
+go get -u github.com/rogpeppe/godef
+go get -u golang.org/x/tools/cmd/guru</code></pre>
+<p>悲剧发生了：！</p>
+<pre><code>[xxx ~]$ go get -u golang.org/x/tools/cmd/goimports
+# cd .; git clone https://go.googlesource.com/tools /home/pmlpml/go/src/golang.org/x/tools
+正克隆到 &#39;/home/pmlpml/go/src/golang.org/x/tools&#39;...
+fatal: unable to access &#39;https://go.googlesource.com/tools/&#39;: Failed to connect to 2a00:1450:400e:806::200e: Network is unreachable
+package golang.org/x/tools/cmd/goimports: exit status 128</code></pre>
+<h4>4.2 解决问题</h4>
+<p><strong>GO 工具包安装方法</strong><br />
+参考 <a href="https://studygolang.com/articles/10263" class="uri">https://studygolang.com/articles/10263</a></p>
+<p>找GOPATH的位置</p>
+<pre><code>[~]$ go env
+...
+GOPATH=&quot;...&quot;
+...</code></pre>
+<p>获得帮助</p>
+<pre><code>[~]$ go help get</code></pre>
+<p>下载源代码到本地</p>
+<pre><code># 创建文件夹
+mkdir $GOPATH/src/golang.org/x/
+# 进入文件夹
+cd $GOPATH/src/golang.org/x/
+# 下载源码
+git clone https://github.com/golang/tools.git</code></pre>
+<p>安装工具包</p>
+<pre><code>go install golang.org/x/tools/cmd/goimports
+go install golang.org/x/tools/cmd/gorename
+go install golang.org/x/tools/cmd/guru
+# 强力建议先下载，后安装。避免 get 的等待
+...</code></pre>
+<p>安装完成后，就 $GOROOT/bin 下看到这些执行文件</p>
+<h4 id="hello-world">4.3 hello world！</h4>
+<p>？</p>
+</body>
+</html>
