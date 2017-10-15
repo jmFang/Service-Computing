@@ -1,0 +1,9 @@
+./swich 
+-s1 
+-e5 
+-f 
+./input.txt 
+1
+./input.txt reading file
+fin is reading file : ./input.txt
+./input.txt stdout
