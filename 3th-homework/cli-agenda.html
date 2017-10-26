@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link href="data:text/css;charset=utf-8,%0A%0A%0A%0Aarticle%2C%0Aaside%2C%0Adetails%2C%0Afigcaption%2C%0Afigure%2C%0Afooter%2C%0Aheader%2C%0Ahgroup%2C%0Amain%2C%0Anav%2C%0Asection%2C%0Asummary%20%7B%0Adisplay%3A%20block%3B%0A%7D%0A%0Aaudio%2C%0Acanvas%2C%0Avideo%20%7B%0Adisplay%3A%20inline%2Dblock%3B%0A%7D%0A%0Aaudio%3Anot%28%5Bcontrols%5D%29%20%7B%0Adisplay%3A%20none%3B%0Aheight%3A%200%3B%0A%7D%0A%0A%5Bhidden%5D%2C%0Atemplate%20%7B%0Adisplay%3A%20none%3B%0A%7D%0A%0A%0Ahtml%20%7B%0Afont%2Dfamily%3A%20sans%2Dserif%3B%20%0A%2Dms%2Dtext%2Dsize%2Dadjust%3A%20100%25%3B%20%0A%2Dwebkit%2Dtext%2Dsize%2Dadjust%3A%20100%25%3B%20%0A%7D%0A%0Abody%20%7B%0Amargin%3A%200%3B%0A%7D%0A%0A%0Aa%20%7B%0Abackground%3A%20transparent%3B%0A%7D%0A%0Aa%3Afocus%20%7B%0Aoutline%3A%20thin%20dotted%3B%0A%7D%0A%0Aa%3Aactive%2C%0Aa%3Ahover%20%7B%0Aoutline%3A%200%3B%0A%7D%0A%0A%0Ah1%20%7B%0Afont%2Dsize%3A%202em%3B%0Amargin%3A%200%2E67em%200%3B%0A%7D%0A%0Aabbr%5Btitle%5D%20%7B%0Aborder%2Dbottom%3A%201px%20dotted%3B%0A%7D%0A%0Ab%2C%0Astrong%20%7B%0Afont%2Dweight%3A%20bold%3B%0A%7D%0A%0Adfn%20%7B%0Afont%2Dstyle%3A%20italic%3B%0A%7D%0A%0Ahr%20%7B%0A%2Dmoz%2Dbox%2Dsizing%3A%20content%2Dbox%3B%0Abox%2Dsizing%3A%20content%2Dbox%3B%0Aheight%3A%200%3B%0A%7D%0A%0Amark%20%7B%0Abackground%3A%20%23ff0%3B%0Acolor%3A%20%23000%3B%0A%7D%0A%0Acode%2C%0Akbd%2C%0Apre%2C%0Asamp%20%7B%0Afont%2Dfamily%3A%20monospace%2C%20serif%3B%0Afont%2Dsize%3A%201em%3B%0A%7D%0A%0Apre%20%7B%0Awhite%2Dspace%3A%20pre%2Dwrap%3B%0A%7D%0A%0Aq%20%7B%0Aquotes%3A%20%22%5C201C%22%20%22%5C201D%22%20%22%5C2018%22%20%22%5C2019%22%3B%0A%7D%0A%0Asmall%20%7B%0Afont%2Dsize%3A%2080%25%3B%0A%7D%0A%0Asub%2C%0Asup%20%7B%0Afont%2Dsize%3A%2075%25%3B%0Aline%2Dheight%3A%200%3B%0Aposition%3A%20relative%3B%0Avertical%2Dalign%3A%20baseline%3B%0A%7D%0Asup%20%7B%0Atop%3A%20%2D0%2E5em%3B%0A%7D%0Asub%20%7B%0Abottom%3A%20%2D0%2E25em%3B%0A%7D%0A%0A%0Aimg%20%7B%0Aborder%3A%200%3B%0A%7D%0A%0Asvg%3Anot%28%3Aroot%29%20%7B%0Aoverflow%3A%20hidden%3B%0A%7D%0A%0A%0Afigure%20%7B%0Amargin%3A%200%3B%0A%7D%0A%0A%0Afieldset%20%7B%0Aborder%3A%201px%20solid%20%23c0c0c0%3B%0Amargin%3A%200%202px%3B%0Apadding%3A%200%2E35em%200%2E625em%200%2E75em%3B%0A%7D%0A%0Alegend%20%7B%0Aborder%3A%200%3B%20%0Apadding%3A%200%3B%20%0A%7D%0A%0Abutton%2C%0Ainput%2C%0Aselect%2C%0Atextarea%20%7B%0Afont%2Dfamily%3A%20inherit%3B%20%0Afont%2Dsize%3A%20100%25%3B%20%0Amargin%3A%200%3B%20%0A%7D%0A%0Abutton%2C%0Ainput%20%7B%0Aline%2Dheight%3A%20normal%3B%0A%7D%0A%0Abutton%2C%0Aselect%20%7B%0Atext%2Dtransform%3A%20none%3B%0A%7D%0A%0Abutton%2C%0Ahtml%20input%5Btype%3D%22button%22%5D%2C%20%0Ainput%5Btype%3D%22reset%22%5D%2C%0Ainput%5Btype%3D%22submit%22%5D%20%7B%0A%2Dwebkit%2Dappearance%3A%20button%3B%20%0Acursor%3A%20pointer%3B%20%0A%7D%0A%0Abutton%5Bdisabled%5D%2C%0Ahtml%20input%5Bdisabled%5D%20%7B%0Acursor%3A%20default%3B%0A%7D%0A%0Ainput%5Btype%3D%22checkbox%22%5D%2C%0Ainput%5Btype%3D%22radio%22%5D%20%7B%0Abox%2Dsizing%3A%20border%2Dbox%3B%20%0Apadding%3A%200%3B%20%0A%7D%0A%0Ainput%5Btype%3D%22search%22%5D%20%7B%0A%2Dwebkit%2Dappearance%3A%20textfield%3B%20%0A%2Dmoz%2Dbox%2Dsizing%3A%20content%2Dbox%3B%0A%2Dwebkit%2Dbox%2Dsizing%3A%20content%2Dbox%3B%20%0Abox%2Dsizing%3A%20content%2Dbox%3B%0A%7D%0A%0Ainput%5Btype%3D%22search%22%5D%3A%3A%2Dwebkit%2Dsearch%2Dcancel%2Dbutton%2C%0Ainput%5Btype%3D%22search%22%5D%3A%3A%2Dwebkit%2Dsearch%2Ddecoration%20%7B%0A%2Dwebkit%2Dappearance%3A%20none%3B%0A%7D%0A%0Abutton%3A%3A%2Dmoz%2Dfocus%2Dinner%2C%0Ainput%3A%3A%2Dmoz%2Dfocus%2Dinner%20%7B%0Aborder%3A%200%3B%0Apadding%3A%200%3B%0A%7D%0A%0Atextarea%20%7B%0Aoverflow%3A%20auto%3B%20%0Avertical%2Dalign%3A%20top%3B%20%0A%7D%0A%0A%0Atable%20%7B%0Aborder%2Dcollapse%3A%20collapse%3B%0Aborder%2Dspacing%3A%200%3B%0A%7D%0A%2Ego%2Dtop%20%7B%0Aposition%3A%20fixed%3B%0Abottom%3A%202em%3B%0Aright%3A%202em%3B%0Atext%2Ddecoration%3A%20none%3B%0Abackground%2Dcolor%3A%20%23E0E0E0%3B%0Afont%2Dsize%3A%2012px%3B%0Apadding%3A%201em%3B%0Adisplay%3A%20inline%3B%0A%7D%0A%0Ahtml%2Cbody%7B%20margin%3A%20auto%3B%0Apadding%2Dright%3A%201em%3B%0Apadding%2Dleft%3A%201em%3B%0Amax%2Dwidth%3A%2044em%3B%20color%3Ablack%3B%7D%2A%3Anot%28%27%23mkdbuttons%27%29%7Bmargin%3A0%3Bpadding%3A0%7Dbody%7Bfont%3A13%2E34px%20helvetica%2Carial%2Cfreesans%2Cclean%2Csans%2Dserif%3B%2Dwebkit%2Dfont%2Dsmoothing%3Asubpixel%2Dantialiased%3Bline%2Dheight%3A1%2E4%3Bpadding%3A3px%3Bbackground%3A%23fff%3Bborder%2Dradius%3A3px%3B%2Dmoz%2Dborder%2Dradius%3A3px%3B%2Dwebkit%2Dborder%2Dradius%3A3px%7Dp%7Bmargin%3A1em%200%7Da%7Bcolor%3A%234183c4%3Btext%2Ddecoration%3Anone%7Dbody%7Bbackground%2Dcolor%3A%23fff%3Bpadding%3A30px%3Bmargin%3A15px%3Bfont%2Dsize%3A14px%3Bline%2Dheight%3A1%2E6%7Dbody%3E%2A%3Afirst%2Dchild%7Bmargin%2Dtop%3A0%21important%7Dbody%3E%2A%3Alast%2Dchild%7Bmargin%2Dbottom%3A0%21important%7D%40media%20screen%7Bbody%7Bbox%2Dshadow%3A0%200%200%201px%20%23cacaca%2C0%200%200%204px%20%23eee%7D%7Dh1%2Ch2%2Ch3%2Ch4%2Ch5%2Ch6%7Bmargin%3A20px%200%2010px%3Bpadding%3A0%3Bfont%2Dweight%3Abold%3B%2Dwebkit%2Dfont%2Dsmoothing%3Asubpixel%2Dantialiased%3Bcursor%3Atext%7Dh1%7Bfont%2Dsize%3A28px%3Bcolor%3A%23000%7Dh2%7Bfont%2Dsize%3A24px%3Bborder%2Dbottom%3A1px%20solid%20%23ccc%3Bcolor%3A%23000%7Dh3%7Bfont%2Dsize%3A18px%3Bcolor%3A%23333%7Dh4%7Bfont%2Dsize%3A16px%3Bcolor%3A%23333%7Dh5%7Bfont%2Dsize%3A14px%3Bcolor%3A%23333%7Dh6%7Bcolor%3A%23777%3Bfont%2Dsize%3A14px%7Dp%2Cblockquote%2Ctable%2Cpre%7Bmargin%3A15px%200%7Dul%7Bpadding%2Dleft%3A30px%7Dol%7Bpadding%2Dleft%3A30px%7Dol%20li%20ul%3Afirst%2Dof%2Dtype%7Bmargin%2Dtop%3A0%7Dhr%7Bbackground%3Atransparent%20url%28data%3Aimage%2Fpng%3Bbase64%2CiVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw%2FeHBhY2tldCBiZWdpbj0i77u%2FIiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8%2BIDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI%2FPqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC%29%20repeat%2Dx%200%200%3Bborder%3A0%20none%3Bcolor%3A%23ccc%3Bheight%3A4px%3Bpadding%3A0%7Dbody%3Eh2%3Afirst%2Dchild%7Bmargin%2Dtop%3A0%3Bpadding%2Dtop%3A0%7Dbody%3Eh1%3Afirst%2Dchild%7Bmargin%2Dtop%3A0%3Bpadding%2Dtop%3A0%7Dbody%3Eh1%3Afirst%2Dchild%2Bh2%7Bmargin%2Dtop%3A0%3Bpadding%2Dtop%3A0%7Dbody%3Eh3%3Afirst%2Dchild%2Cbody%3Eh4%3Afirst%2Dchild%2Cbody%3Eh5%3Afirst%2Dchild%2Cbody%3Eh6%3Afirst%2Dchild%7Bmargin%2Dtop%3A0%3Bpadding%2Dtop%3A0%7Da%3Afirst%2Dchild%20h1%2Ca%3Afirst%2Dchild%20h2%2Ca%3Afirst%2Dchild%20h3%2Ca%3Afirst%2Dchild%20h4%2Ca%3Afirst%2Dchild%20h5%2Ca%3Afirst%2Dchild%20h6%7Bmargin%2Dtop%3A0%3Bpadding%2Dtop%3A0%7Dh1%2Bp%2Ch2%2Bp%2Ch3%2Bp%2Ch4%2Bp%2Ch5%2Bp%2Ch6%2Bp%2Cul%20li%3E%3Afirst%2Dchild%2Col%20li%3E%3Afirst%2Dchild%7Bmargin%2Dtop%3A0%7Ddl%7Bpadding%3A0%7Ddl%20dt%7Bfont%2Dsize%3A14px%3Bfont%2Dweight%3Abold%3Bfont%2Dstyle%3Aitalic%3Bpadding%3A0%3Bmargin%3A15px%200%205px%7Ddl%20dt%3Afirst%2Dchild%7Bpadding%3A0%7Ddl%20dt%3E%3Afirst%2Dchild%7Bmargin%2Dtop%3A0%7Ddl%20dt%3E%3Alast%2Dchild%7Bmargin%2Dbottom%3A0%7Ddl%20dd%7Bmargin%3A0%200%2015px%3Bpadding%3A0%2015px%7Ddl%20dd%3E%3Afirst%2Dchild%7Bmargin%2Dtop%3A0%7Ddl%20dd%3E%3Alast%2Dchild%7Bmargin%2Dbottom%3A0%7Dblockquote%7Bborder%2Dleft%3A4px%20solid%20%23DDD%3Bpadding%3A0%2015px%3Bcolor%3A%23777%7Dblockquote%3E%3Afirst%2Dchild%7Bmargin%2Dtop%3A0%7Dblockquote%3E%3Alast%2Dchild%7Bmargin%2Dbottom%3A0%7Dtable%7Bborder%2Dcollapse%3Acollapse%3Bborder%2Dspacing%3A0%3Bfont%2Dsize%3A100%25%3Bfont%3Ainherit%7Dtable%20th%7Bfont%2Dweight%3Abold%3Bborder%3A1px%20solid%20%23ccc%3Bpadding%3A6px%2013px%7Dtable%20td%7Bborder%3A1px%20solid%20%23ccc%3Bpadding%3A6px%2013px%7Dtable%20tr%7Bborder%2Dtop%3A1px%20solid%20%23ccc%3Bbackground%2Dcolor%3A%23fff%7Dtable%20tr%3Anth%2Dchild%282n%29%7Bbackground%2Dcolor%3A%23f8f8f8%7Dimg%7Bmax%2Dwidth%3A100%25%7Dcode%2Ctt%7Bmargin%3A0%202px%3Bpadding%3A0%205px%3Bwhite%2Dspace%3Anowrap%3Bborder%3A1px%20solid%20%23eaeaea%3Bbackground%2Dcolor%3A%23f8f8f8%3Bborder%2Dradius%3A3px%3Bfont%2Dfamily%3AConsolas%2C%27Liberation%20Mono%27%2CCourier%2Cmonospace%3Bfont%2Dsize%3A12px%3Bcolor%3A%23333%7Dpre%3Ecode%7Bmargin%3A0%3Bpadding%3A0%3Bwhite%2Dspace%3Apre%3Bborder%3A0%3Bbackground%3Atransparent%7D%2Ehighlight%20pre%7Bbackground%2Dcolor%3A%23f8f8f8%3Bborder%3A1px%20solid%20%23ccc%3Bfont%2Dsize%3A13px%3Bline%2Dheight%3A19px%3Boverflow%3Aauto%3Bpadding%3A6px%2010px%3Bborder%2Dradius%3A3px%7Dpre%7Bbackground%2Dcolor%3A%23f8f8f8%3Bborder%3A1px%20solid%20%23ccc%3Bfont%2Dsize%3A13px%3Bline%2Dheight%3A19px%3Boverflow%3Aauto%3Bpadding%3A6px%2010px%3Bborder%2Dradius%3A3px%7Dpre%20code%2Cpre%20tt%7Bbackground%2Dcolor%3Atransparent%3Bborder%3A0%7D%2Epoetry%20pre%7Bfont%2Dfamily%3AGeorgia%2CGaramond%2Cserif%21important%3Bfont%2Dstyle%3Aitalic%3Bfont%2Dsize%3A110%25%21important%3Bline%2Dheight%3A1%2E6em%3Bdisplay%3Ablock%3Bmargin%2Dleft%3A1em%7D%2Epoetry%20pre%20code%7Bfont%2Dfamily%3AGeorgia%2CGaramond%2Cserif%21important%3Bword%2Dbreak%3Abreak%2Dall%3Bword%2Dbreak%3Abreak%2Dword%3B%2Dwebkit%2Dhyphens%3Aauto%3B%2Dmoz%2Dhyphens%3Aauto%3Bhyphens%3Aauto%3Bwhite%2Dspace%3Apre%2Dwrap%7Dsup%2Csub%2Ca%2Efootnote%7Bfont%2Dsize%3A1%2E4ex%3Bheight%3A0%3Bline%2Dheight%3A1%3Bvertical%2Dalign%3Asuper%3Bposition%3Arelative%7Dsub%7Bvertical%2Dalign%3Asub%3Btop%3A%2D1px%7D%40media%20print%7Bbody%7Bbackground%3A%23fff%7Dimg%2Cpre%2Cblockquote%2Ctable%2Cfigure%7Bpage%2Dbreak%2Dinside%3Aavoid%7Dbody%7Bbackground%3A%23fff%3Bborder%3A0%7Dcode%7Bbackground%2Dcolor%3A%23fff%3Bcolor%3A%23333%21important%3Bpadding%3A0%20%2E2em%3Bborder%3A1px%20solid%20%23dedede%7Dpre%7Bbackground%3A%23fff%7Dpre%20code%7Bbackground%2Dcolor%3Awhite%21important%3Boverflow%3Avisible%7D%7D%40media%20screen%7Bbody%2Einverted%7Bcolor%3A%23eee%21important%3Bborder%2Dcolor%3A%23555%3Bbox%2Dshadow%3Anone%7D%2Einverted%20body%2C%2Einverted%20hr%20%2Einverted%20p%2C%2Einverted%20td%2C%2Einverted%20li%2C%2Einverted%20h1%2C%2Einverted%20h2%2C%2Einverted%20h3%2C%2Einverted%20h4%2C%2Einverted%20h5%2C%2Einverted%20h6%2C%2Einverted%20th%2C%2Einverted%20%2Emath%2C%2Einverted%20caption%2C%2Einverted%20dd%2C%2Einverted%20dt%2C%2Einverted%20blockquote%7Bcolor%3A%23eee%21important%3Bborder%2Dcolor%3A%23555%3Bbox%2Dshadow%3Anone%7D%2Einverted%20td%2C%2Einverted%20th%7Bbackground%3A%23333%7D%2Einverted%20h2%7Bborder%2Dcolor%3A%23555%7D%2Einverted%20hr%7Bborder%2Dcolor%3A%23777%3Bborder%2Dwidth%3A1px%21important%7D%3A%3Aselection%7Bbackground%3Argba%28157%2C193%2C200%2C0%2E5%29%7Dh1%3A%3Aselection%7Bbackground%2Dcolor%3Argba%2845%2C156%2C208%2C0%2E3%29%7Dh2%3A%3Aselection%7Bbackground%2Dcolor%3Argba%2890%2C182%2C224%2C0%2E3%29%7Dh3%3A%3Aselection%2Ch4%3A%3Aselection%2Ch5%3A%3Aselection%2Ch6%3A%3Aselection%2Cli%3A%3Aselection%2Col%3A%3Aselection%7Bbackground%2Dcolor%3Argba%28133%2C201%2C232%2C0%2E3%29%7Dcode%3A%3Aselection%7Bbackground%2Dcolor%3Argba%280%2C0%2C0%2C0%2E7%29%3Bcolor%3A%23eee%7Dcode%20span%3A%3Aselection%7Bbackground%2Dcolor%3Argba%280%2C0%2C0%2C0%2E7%29%21important%3Bcolor%3A%23eee%21important%7Da%3A%3Aselection%7Bbackground%2Dcolor%3Argba%28255%2C230%2C102%2C0%2E2%29%7D%2Einverted%20a%3A%3Aselection%7Bbackground%2Dcolor%3Argba%28255%2C230%2C102%2C0%2E6%29%7Dtd%3A%3Aselection%2Cth%3A%3Aselection%2Ccaption%3A%3Aselection%7Bbackground%2Dcolor%3Argba%28180%2C237%2C95%2C0%2E5%29%7D%2Einverted%7Bbackground%3A%230b2531%3Bbackground%3A%23252a2a%7D%2Einverted%20body%7Bbackground%3A%23252a2a%7D%2Einverted%20a%7Bcolor%3A%23acd1d5%7D%7D%2Ehighlight%20%2Ec%7Bcolor%3A%23998%3Bfont%2Dstyle%3Aitalic%7D%2Ehighlight%20%2Eerr%7Bcolor%3A%23a61717%3Bbackground%2Dcolor%3A%23e3d2d2%7D%2Ehighlight%20%2Ek%2C%2Ehighlight%20%2Eo%7Bfont%2Dweight%3Abold%7D%2Ehighlight%20%2Ecm%7Bcolor%3A%23998%3Bfont%2Dstyle%3Aitalic%7D%2Ehighlight%20%2Ecp%7Bcolor%3A%23999%3Bfont%2Dweight%3Abold%7D%2Ehighlight%20%2Ec1%7Bcolor%3A%23998%3Bfont%2Dstyle%3Aitalic%7D%2Ehighlight%20%2Ecs%7Bcolor%3A%23999%3Bfont%2Dweight%3Abold%3Bfont%2Dstyle%3Aitalic%7D%2Ehighlight%20%2Egd%7Bcolor%3A%23000%3Bbackground%2Dcolor%3A%23fdd%7D%2Ehighlight%20%2Egd%20%2Ex%7Bcolor%3A%23000%3Bbackground%2Dcolor%3A%23faa%7D%2Ehighlight%20%2Ege%7Bfont%2Dstyle%3Aitalic%7D%2Ehighlight%20%2Egr%7Bcolor%3A%23a00%7D%2Ehighlight%20%2Egh%7Bcolor%3A%23999%7D%2Ehighlight%20%2Egi%7Bcolor%3A%23000%3Bbackground%2Dcolor%3A%23dfd%7D%2Ehighlight%20%2Egi%20%2Ex%7Bcolor%3A%23000%3Bbackground%2Dcolor%3A%23afa%7D%2Ehighlight%20%2Ego%7Bcolor%3A%23888%7D%2Ehighlight%20%2Egp%7Bcolor%3A%23555%7D%2Ehighlight%20%2Egs%7Bfont%2Dweight%3Abold%7D%2Ehighlight%20%2Egu%7Bcolor%3A%23800080%3Bfont%2Dweight%3Abold%7D%2Ehighlight%20%2Egt%7Bcolor%3A%23a00%7D%2Ehighlight%20%2Ekc%2C%2Ehighlight%20%2Ekd%2C%2Ehighlight%20%2Ekn%2C%2Ehighlight%20%2Ekp%2C%2Ehighlight%20%2Ekr%7Bfont%2Dweight%3Abold%7D%2Ehighlight%20%2Ekt%7Bcolor%3A%23458%3Bfont%2Dweight%3Abold%7D%2Ehighlight%20%2Em%7Bcolor%3A%23099%7D%2Ehighlight%20%2Es%7Bcolor%3A%23d14%7D%2Ehighlight%20%2Ena%7Bcolor%3A%23008080%7D%2Ehighlight%20%2Enb%7Bcolor%3A%230086b3%7D%2Ehighlight%20%2Enc%7Bcolor%3A%23458%3Bfont%2Dweight%3Abold%7D%2Ehighlight%20%2Eno%7Bcolor%3A%23008080%7D%2Ehighlight%20%2Eni%7Bcolor%3A%23800080%7D%2Ehighlight%20%2Ene%2C%2Ehighlight%20%2Enf%7Bcolor%3A%23900%3Bfont%2Dweight%3Abold%7D%2Ehighlight%20%2Enn%7Bcolor%3A%23555%7D%2Ehighlight%20%2Ent%7Bcolor%3A%23000080%7D%2Ehighlight%20%2Env%7Bcolor%3A%23008080%7D%2Ehighlight%20%2Eow%7Bfont%2Dweight%3Abold%7D%2Ehighlight%20%2Ew%7Bcolor%3A%23bbb%7D%2Ehighlight%20%2Emf%2C%2Ehighlight%20%2Emh%2C%2Ehighlight%20%2Emi%2C%2Ehighlight%20%2Emo%7Bcolor%3A%23099%7D%2Ehighlight%20%2Esb%2C%2Ehighlight%20%2Esc%2C%2Ehighlight%20%2Esd%2C%2Ehighlight%20%2Es2%2C%2Ehighlight%20%2Ese%2C%2Ehighlight%20%2Esh%2C%2Ehighlight%20%2Esi%2C%2Ehighlight%20%2Esx%7Bcolor%3A%23d14%7D%2Ehighlight%20%2Esr%7Bcolor%3A%23009926%7D%2Ehighlight%20%2Es1%7Bcolor%3A%23d14%7D%2Ehighlight%20%2Ess%7Bcolor%3A%23990073%7D%2Ehighlight%20%2Ebp%7Bcolor%3A%23999%7D%2Ehighlight%20%2Evc%2C%2Ehighlight%20%2Evg%2C%2Ehighlight%20%2Evi%7Bcolor%3A%23008080%7D%2Ehighlight%20%2Eil%7Bcolor%3A%23099%7D%2Ehighlight%20%2Egc%7Bcolor%3A%23999%3Bbackground%2Dcolor%3A%23eaf2f5%7D%2Etype%2Dcsharp%20%2Ehighlight%20%2Ek%2C%2Etype%2Dcsharp%20%2Ehighlight%20%2Ekt%7Bcolor%3A%2300F%7D%2Etype%2Dcsharp%20%2Ehighlight%20%2Enf%7Bcolor%3A%23000%3Bfont%2Dweight%3Anormal%7D%2Etype%2Dcsharp%20%2Ehighlight%20%2Enc%7Bcolor%3A%232b91af%7D%2Etype%2Dcsharp%20%2Ehighlight%20%2Enn%7Bcolor%3A%23000%7D%2Etype%2Dcsharp%20%2Ehighlight%20%2Es%2C%2Etype%2Dcsharp%20%2Ehighlight%20%2Esc%7Bcolor%3A%23a31515%7D%0A" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h2 id="cli----agenda">CLI 命令行实用程序开发实战 - Agenda</h2>
+<h3>1、概述</h3>
+<p>  命令行实用程序并不是都象 cat、more、grep 是简单命令。<a href="https://go-zh.org/cmd/go/">go</a> 项目管理程序，类似 java 项目管理 <a href="http://maven.apache.org/">maven</a>、Nodejs 项目管理程序 <a href="https://www.npmjs.com/">npm</a>、git 命令行客户端、 docker 与 kubernetes 容器管理工具等等都是采用了较复杂的命令行。即一个实用程序同时支持多个子命令，每个子命令有各自独立的参数，命令之间可能存在共享的代码或逻辑，同时随着产品的发展，这些命令可能发生功能变化、添加新命令等。因此，符合 <a href="https://en.wikipedia.org/wiki/Open/closed_principle">OCP 原则</a> 的设计是至关重要的编程需求。</p>
+<p><strong>任务目标</strong></p>
+<ol>
+<li>熟悉 go 命令行工具管理项目</li>
+<li>综合使用 go 的函数、数据结构与接口，编写一个简单命令行应用 agenda</li>
+<li>使用面向对象的思想设计程序，使得程序具有良好的结构命令，并能方便修改、扩展新的命令,不会影响其他命令的代码</li>
+<li>项目部署在 Github 上，合适多人协作，特别是代码归并</li>
+<li>支持日志（原则上不使用debug调试程序）</li>
+</ol>
+<h3 id="go-">2、GO 命令</h3>
+<p><a href="https://go-zh.org/cmd/go/">GO命令</a> 的官方说明并不一定是最新版本。最新说明请使用命令 <code>go help</code> 获取。<br />
+<a href="https://go-zh.org/doc/articles/go_command.html">关于GO命令</a></p>
+<p>必须了解的环境变量：<strong>GOROOT，GOPATH</strong><br />
+<a href="https://go-zh.org/cmd/go/#hdr-GOPATH_environment_variable">项目目录与 gopath</a></p>
+<h4 id="go-">2.1 go 命令的格式</h4>
+<p>使用：</p>
+<pre><code>go command [arguments]</code></pre>
+<p>版本（go 1.8）的命令有：</p>
+<pre><code>build       compile packages and dependencies
+clean       remove object files
+doc         show documentation for package or symbol
+env         print Go environment information
+bug         start a bug report
+fix         run go tool fix on packages
+fmt         run gofmt on package sources
+generate    generate Go files by processing source
+get         download and install packages and dependencies
+install     compile and install packages and dependencies
+list        list packages
+run         compile and run Go program
+test        test packages
+tool        run specified go tool
+version     print Go version
+vet         run go tool vet on packages</code></pre>
+<h4 id="go-">2.2 go 命令分类</h4>
+<ol>
+<li>环境显示： version、env</li>
+<li>构建流水线： clean、build、test、run、（publish/git）、get、install</li>
+<li>包管理： list, get, install</li>
+<li>杂项：fmt，vet，doc，tools ...</li>
+</ol>
+<p>具体命令格式与参数使用 <code>go help [topic]</code></p>
+<h3>3、准备知识或资源</h3>
+<h4 id="golang-">3.1 Golang 知识整理</h4>
+<p>这里推荐 time-track 的个人博客，它的学习轨迹与课程要求基本一致。以下是他语言学习的笔记，可用于语言快速浏览与参考：</p>
+<ul>
+<li><a href="http://time-track.cn/gopl-notes-program-structure.html">《Go程序设计语言》要点总结——程序结构</a></li>
+<li><a href="http://time-track.cn/gopl-notes-types.html">《Go程序设计语言》要点总结——数据类型</a></li>
+<li><a href="http://time-track.cn/gopl-notes-function.html">《Go程序设计语言》要点总结——函数</a></li>
+<li><a href="http://time-track.cn/gopl-notes-function.html">《Go程序设计语言》要点总结——方法</a></li>
+<li><a href="http://time-track.cn/gopl-notes-interface.html">《Go程序设计语言》要点总结——接口</a></li>
+</ul>
+<p>以上仅代表作者观点，部分内容是不准确的，请用批判的态度看待网上博客。 切记：</p>
+<ul>
+<li>GO <strong>不是面向对象(<S>OOP</S>)</strong> 的。 所谓方法只是一种<a href="https://baike.baidu.com/item/%E8%AF%AD%E6%B3%95%E7%B3%96">语法糖</a>，它是特定类型上定义的操作（operation）</li>
+<li>指针是没有 nil 的，这可以避免一些尴尬。 <code>p.X</code> 与 <code>v.x</code> (p 指针， v 值) 在语义上是无区别的，但实现上是有区别的 <code>p.x</code> 是实现 c 语言 <code>p-&gt;x</code> 的语法糖</li>
+<li>zero 值好重要</li>
+</ul>
+<h4 id="json-">3.2 JSON 序列化与反序列化</h4>
+<p>参考：<a href="https://blog.go-zh.org/json-and-go">JSON and Go</a><br />
+json 包是内置支持的，文档位置：<a href="https://go-zh.org/pkg/encoding/json/" class="uri">https://go-zh.org/pkg/encoding/json/</a></p>
+<h4>3.3 复杂命令行的处理</h4>
+<p>不要轻易“发明轮子”。为了实现 POSIX/GNU-风格参数处理，--flags，包括命令完成等支持，程序员们开发了无数第三方包，这些包可以在 <a href="https://godoc.org/">godoc</a> 找到。</p>
+<ul>
+<li>pflag 包： <a href="https://godoc.org/github.com/spf13/pflag" class="uri">https://godoc.org/github.com/spf13/pflag</a></li>
+<li>cobra 包： <a href="https://godoc.org/github.com/spf13/cobra" class="uri">https://godoc.org/github.com/spf13/cobra</a></li>
+<li>goptions 包： <a href="https://godoc.org/github.com/voxelbrain/goptions" class="uri">https://godoc.org/github.com/voxelbrain/goptions</a></li>
+<li>...</li>
+<li>docker command 包：<a href="https://godoc.org/github.com/docker/cli/cli/command" class="uri">https://godoc.org/github.com/docker/cli/cli/command</a></li>
+</ul>
+<p><a href="http://www.xuebuyuan.com/1588520.html">go dead project</a> <strong>非常有用</strong></p>
+<p>这里我们选择 cobar 这个工具。</p>
+<p><strong>tip: 安装 cobra</strong></p>
+<ul>
+<li>使用命令 <code>go get -v github.com/spf13/cobra/cobra</code> 下载过程中，会出提示如下错误</li>
+</ul>
+<pre><code>Fetching https://golang.org/x/sys/unix?go-get=1
+https fetch failed: Get https://golang.org/x/sys/unix?go-get=1: dial tcp 216.239.37.1:443: i/o timeout</code></pre>
+<p>这是熟悉的错误，请在 <code>$GOPATH/src/golang.org/x</code> 目录下用 <code>git clone</code> 下载 <code>sys</code> 和 <code>text</code> 项目，然后使用 <code>go install github.com/spf13/cobra/cobra</code>, 安装后在 <code>$GOBIN</code> 下出现了 cobra 可执行程序。</p>
+<p><strong>Cobra 的简单使用</strong></p>
+<p>创建一个处理命令 <code>agenda register -uTestUser</code> 或 <code>agenda register --user=TestUser</code> 的小程序。</p>
+<p>简要步骤如下：</p>
+<pre><code>cobra init
+cobra add register</code></pre>
+<p>需要的文件就产生了。 你需要阅读 <code>main.go</code> 的 <code>main()</code> ; <code>root.go</code> 的 <code>Execute()</code>; 最后修改 <code>register.go</code>, <code>init()</code> 添加：</p>
+<pre><code>registerCmd.Flags().StringP(&quot;user&quot;, &quot;u&quot;, &quot;Anonymous&quot;, &quot;Help message for username&quot;)</code></pre>
+<p><code>Run</code> 匿名回调函数中添加：</p>
+<pre><code>username, _ := cmd.Flags().GetString(&quot;user&quot;)
+fmt.Println(&quot;register called by &quot; + username)</code></pre>
+<p>测试命令：</p>
+<pre><code>$ go run main.go register --user=TestUser
+register called by TestUser</code></pre>
+<p>参考文档：</p>
+<ul>
+<li><a href="https://github.com/spf13/cobra#overview">官方文档</a> <strong>推荐</strong></li>
+<li><a href="http://time-track.cn/cobra-brief-introduction.html">Cobra简介</a> 不推荐</li>
+</ul>
+<h3 id="agenda-">4、agenda 开发项目</h3>
+<h4>4.1 需求描述</h4>
+<ul>
+<li>业务需求：见后面附件</li>
+<li>功能需求： 设计一组命令完成 agenda 的管理，例如：
+<ul>
+<li>agenda help ：列出命令说明</li>
+<li>agenda register -uUserName --password pass -<a href="mailto:email=a@xxx.com">email=a@xxx.com</a> ：注册用户</li>
+<li>agenda help register ：列出 register 命令的描述</li>
+<li>agenda cm ... : 创建一个会议</li>
+<li>原则上一个命令对应一个业务功能</li>
+</ul></li>
+<li>持久化要求：
+<ul>
+<li>使用 json 存储 User 和 Meeting 实体</li>
+<li>当前用户信息存储在 curUser.txt 中</li>
+</ul></li>
+<li>开发需求
+<ul>
+<li>团队：<strong>2-3人</strong>，一人作为 master 创建程序框架，其他人 fork 该项目，所有人同时开发。团队 <strong>不能少于 2 人</strong></li>
+<li>时间：<strong>两周完成</strong></li>
+</ul></li>
+<li>项目目录
+<ul>
+<li>cmd ：存放命令实现代码</li>
+<li>entity ：存放 User 和 Meeting 对象读写与处理逻辑</li>
+<li>其他目录 ： 自由添加</li>
+</ul></li>
+<li>日志服务
+<ul>
+<li>使用 <a href="https://go-zh.org/pkg/log/">log</a> 包记录命令执行情况</li>
+</ul></li>
+</ul>
+<h4>4.2 第一周任务</h4>
+<ol>
+<li>按 3.3 安装 cobra 并完成小案例</li>
+<li>按需求设计 agenda 的命令与参数（制品 cmd-design.md）</li>
+<li>master 创建项目，提交到 github， 其他人 fork 该项目</li>
+<li>每人分别创建属于自己的命令（命令实现 Print 读取的参数即可），提交并归并。确保不同人管理不同文件，以便于协作</li>
+<li>如时间富余，请完成 User 和 Meeting 实体 json 文件读写</li>
+</ol>
+<p><strong>思考</strong></p>
+<p>假设你要建立项目 <code>testcobra</code>，你必须建立在 <code>$GOPATH\src\$your_git_account\$repo\testcobra</code> 目录下，才能正常实现协作。采用 golang 术语，<code>$GOPATH\src\$your_git_account\$repo\</code> 是你当前的 <strong>工作区</strong> 。</p>
+<p><em>问题</em>：如果你的项目不能公开代码，甚至不能使用 github，如何实现多人协作呢？</p>
+<h4>4.3 第二周任务</h4>
+<ol>
+<li>在项目中添加 <code>.travis.yml</code> 文件，并添加测试程序。让你的项目“持续集成” -- “CI” 了！</li>
+<li>添加 log 服务，记录用户的操作过程，以及关键的输出</li>
+<li>约定 <code>entity</code> 和 <code>cmd</code> 之间的接口服务，实现 agenda，并在 <code>README.md</code> 文件中给出简要使用说明和测试结果</li>
+<li>（如果你有兴趣），使用 <code>pflag</code> 包，自己实现一个简版 <code>Command.go</code> 取代 <code>cobra</code>。<strong>必须使用组合设计模式</strong></li>
+</ol>
+<p><strong>思考</strong></p>
+<p>为什么 <code>cobra</code> 的设计，让我们构建命令行程序变的如此简单？如何持续提升我们的设计能力。</p>
+<h4>4.4 可选任务</h4>
+<p>由于课程 golang 部分非常快，项目涉及许多知识点，需要您分享经验和英文资料翻译，以帮助您的同学入门。主要包括：</p>
+<ul>
+<li>go 语言的一些较难理解的知识</li>
+<li>git 和 travis 在项目中的使用经验</li>
+<li>log 的使用</li>
+<li>程序设计方法与原理</li>
+<li>其他</li>
+</ul>
+<p>分数，就是你贡献的回报！ 请在课程群博客收集提交博客 url</p>
+<h2 id="agenda-">附件：Agenda 业务需求</h2>
+<p><strong>用户注册</strong></p>
+<ol>
+<li>注册新用户时，用户需设置一个唯一的用户名和一个密码。另外，还需登记邮箱及电话信息。</li>
+<li>如果注册时提供的用户名已由其他用户使用，应反馈一个适当的出错信息；成功注册后，亦应反馈一个成功注册的信息。</li>
+</ol>
+<p><strong>用户登录</strong></p>
+<ol>
+<li>用户使用用户名和密码登录 Agenda 系统。</li>
+<li>用户名和密码同时正确则登录成功并反馈一个成功登录的信息。否则，登录失败并反馈一个失败登录的信息。</li>
+</ol>
+<p><strong>用户登出</strong></p>
+<ol>
+<li>已登录的用户登出系统后，只能使用用户注册和用户登录功能。</li>
+</ol>
+<p><strong>用户查询</strong></p>
+<ol>
+<li>已登录的用户可以查看已注册的所有用户的用户名、邮箱及电话信息。</li>
+</ol>
+<p><strong>用户删除</strong></p>
+<ol>
+<li>已登录的用户可以删除本用户账户（即销号）。</li>
+<li>操作成功，需反馈一个成功注销的信息；否则，反馈一个失败注销的信息。</li>
+<li>删除成功则退出系统登录状态。删除后，该用户账户不再存在。</li>
+<li>用户账户删除以后：
+<ul>
+<li>以该用户为 发起者 的会议将被删除</li>
+<li>以该用户为 参与者 的会议将从 参与者 列表中移除该用户。若因此造成会议 参与者 人数为0，则会议也将被删除。</li>
+</ul></li>
+</ol>
+<p><strong>创建会议</strong></p>
+<ol>
+<li>已登录的用户可以添加一个新会议到其议程安排中。会议可以在多个已注册<br />
+用户间举行，不允许包含未注册用户。添加会议时提供的信息应包括：
+<ul>
+<li>会议主题(title)（在会议列表中具有唯一性）</li>
+<li>会议参与者(participator)</li>
+<li>会议起始时间(start time)</li>
+<li>会议结束时间(end time)</li>
+</ul></li>
+<li>注意，任何用户都无法分身参加多个会议。如果用户已有的会议安排（作为发起者或参与者）与将要创建的会议在时间上重叠 （允许仅有端点重叠的情况），则无法创建该会议。</li>
+<li>用户应获得适当的反馈信息，以便得知是成功地创建了新会议，还是在创建过程中出现了某些错误。</li>
+</ol>
+<p><strong>增删会议参与者</strong></p>
+<ol>
+<li>已登录的用户可以向 自己发起的某一会议增加/删除 参与者 。</li>
+<li>增加参与者时需要做 时间重叠 判断（允许仅有端点重叠的情况）。</li>
+<li>删除会议参与者后，若因此造成会议 参与者 人数为0，则会议也将被删除。</li>
+</ol>
+<p><strong>查询会议</strong></p>
+<ol>
+<li>已登录的用户可以查询自己的议程在某一时间段(time interval)内的所有会议安排。</li>
+<li>用户给出所关注时间段的起始时间和终止时间，返回该用户议程中在指定时间范围内找到的所有会议安排的列表。</li>
+<li>在列表中给出每一会议的起始时间、终止时间、主题、以及发起者和参与者。</li>
+<li>注意，查询会议的结果应包括用户作为 发起者或参与者 的会议。</li>
+</ol>
+<p><strong>取消会议</strong></p>
+<ol>
+<li>已登录的用户可以取消 自己发起 的某一会议安排。</li>
+<li>取消会议时，需提供唯一标识：会议主题（title）。</li>
+</ol>
+<p><strong>退出会议</strong></p>
+<ol>
+<li>已登录的用户可以退出 自己参与 的某一会议安排。</li>
+<li>退出会议时，需提供一个唯一标识：会议主题（title）。若因此造成会议 参与者 人数为0，则会议也将被删除。</li>
+</ol>
+<p><strong>清空会议</strong></p>
+<ol>
+<li>已登录的用户可以清空 自己发起 的所有会议安排。</li>
+</ol>
+</body>
+</html>
